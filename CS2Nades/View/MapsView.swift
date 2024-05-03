@@ -92,7 +92,7 @@ extension MapsView {
                         Image("\(filteredMaps[index].photoName)")
                             .resizable()
                             .scaledToFill()
-                            .frame(width: UIScreen.main.bounds.width * 9 / 10, height: UIScreen.main.bounds.height / 1.7)
+                            .frame(width: UIScreen.main.bounds.width * 9 / 10, height: UIScreen.main.bounds.height / 1.59)
                             .clipShape(RoundedRectangle(cornerRadius: 25.0))
                             .opacity(currentIndex == index ? 1.0 : 0)
                             .scaleEffect(currentIndex == index ? 1 : 0.8)

@@ -9,13 +9,21 @@ import SwiftUI
 
 struct RootView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+            VStack {
+                TabView {
+                    
+                    MapsView()
+                        .tabItem {
+                            Label("Maps", systemImage: "map")
+                        }
+                    
+                    SettingsView()
+                        .tabItem {
+                            Label("Settings", systemImage: "gear")
+                        }
+                    
+                }
+            }
     }
 }
 

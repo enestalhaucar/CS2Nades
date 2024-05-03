@@ -21,6 +21,7 @@
 		EC19C0C42BE431F5009331D2 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EC19C0C32BE431F5009331D2 /* FirebaseFirestoreSwift */; };
 		EC19C0C62BE431F5009331D2 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = EC19C0C52BE431F5009331D2 /* FirebaseStorage */; };
 		EC19C0C82BE431F5009331D2 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = EC19C0C72BE431F5009331D2 /* FirebaseStorageCombine-Community */; };
+		EC19C0CA2BE46469009331D2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19C0C92BE46469009331D2 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		EC19C0B12BE43066009331D2 /* MapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsView.swift; sourceTree = "<group>"; };
 		EC19C0B42BE43137009331D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC19C0B82BE4316B009331D2 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
+		EC19C0C92BE46469009331D2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				EC19C0B12BE43066009331D2 /* MapsView.swift */,
+				EC19C0C92BE46469009331D2 /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC19C0CA2BE46469009331D2 /* SettingsView.swift in Sources */,
 				EC19C0B92BE4316C009331D2 /* MapManager.swift in Sources */,
 				EC19C0B22BE43066009331D2 /* MapsView.swift in Sources */,
 				EC19C0A62BE42FFA009331D2 /* RootView.swift in Sources */,
