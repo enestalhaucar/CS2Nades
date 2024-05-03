@@ -8,7 +8,8 @@
 import Foundation
 import FirebaseFirestore
 
-struct Maps {
+struct Maps : Identifiable{
+    var id: String = UUID().uuidString
     let name : String
     let photoName : String
     let logoPhotoName : String
@@ -36,8 +37,8 @@ final class MapManager {
         let mapLogoPhotoName = data["logoPhotoName"] as! String
         let mapIsActive = data["isActive"] as! Bool
         
-       
-        return Maps(name: mapName, photoName: mapPhotoName, logoPhotoName: mapLogoPhotoName, isActive: mapIsActive)
+        
+        return Maps(id: UUID().uuidString, name: mapName, photoName: mapPhotoName, logoPhotoName: mapLogoPhotoName, isActive: mapIsActive)
         
     }
 }
