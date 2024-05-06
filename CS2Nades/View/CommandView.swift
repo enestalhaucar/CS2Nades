@@ -2,34 +2,29 @@
 //  CommandView.swift
 //  CS2Nades
 //
-//  Created by Enes Talha Uçar  on 3.05.2024.
+//  Created by Enes Talha Uçar  on 5.05.2024.
 //
 
 import SwiftUI
 
-
-final class CommandViewModel : ObservableObject {
-    
-    @Published private var commandReaded : [Command] = []
-    
-    func loadCommand() async throws {
-        let loadedCommand = CommandManager.shared.getCommands(commandType: <#T##String#>)
-        
-    }
-    
-}
-
 struct CommandView: View {
-    @State private var vm = CommandViewModel()
+    var navigationTitle : String
+    var commandReaded : [Command]
     var body: some View {
-        VStack {
-            List {
-                
-            }
+        NavigationStack {
+            VStack {
+                List {
+                    ForEach(0..<commandReaded.count, id: \.self) { index in
+                        Text(commandReaded[index].commandName)
+                        Text(commandReaded[index].commandExplanation)
+                    }
+                }
+            }.navigationTitle("Commands")
         }
+        
     }
 }
 
 #Preview {
-    CommandView()
+    CommandView(navigationTitle: "title", commandReaded: [Command(id: "aaaaaa", commandName: "noEnes", commandExplanation: "ecplanation")])
 }

@@ -27,7 +27,7 @@ struct MapView: View {
     let map : Maps
     @StateObject private var vm = MapViewModel()
     
-    @State private var path : [Int] = []
+    
     
     
     var body: some View {

@@ -10,7 +10,8 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 
-struct Command  {
+struct Command : Hashable, Identifiable {
+    var id : String = UUID().uuidString
     let commandName : String
     let commandExplanation : String
 }
@@ -21,8 +22,8 @@ final class CommandManager {
     
     let db = Firestore.firestore()
     
-    func getCommands(commandType : String) async throws -> [Command] {
-        let snapshot = try await db.collection(commandType).getDocuments()
+    func getCommands(commandTitle : String) async throws -> [Command] {
+        let snapshot = try await db.collection(commandTitle).getDocuments()
         
         var commands : [Command] = []
         

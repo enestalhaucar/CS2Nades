@@ -17,10 +17,17 @@ struct RootView: View {
                             Label("Maps", systemImage: "map")
                         }
                     
+                    CommandsView()
+                        .tabItem {
+                            Label("Commands", systemImage: "text.book.closed")
+                        }
+                    
                     SettingsView()
                         .tabItem {
                             Label("Settings", systemImage: "gear")
                         }
+                    
+                    
                     
                 }.tint(.black)
                 
