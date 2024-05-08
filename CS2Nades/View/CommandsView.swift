@@ -22,48 +22,56 @@ final class CommandViewModel : ObservableObject {
             
         }
         
-        
-        
-        print(commandReaded)
-        
     }
     
     
 }
 
 struct CommandsView: View {
+    @State private var dataLoaded = false
     @StateObject private var vm = CommandViewModel()
     
     var body: some View {
-        NavigationStack() {
+        
+        NavigationStack {
             VStack {
                 List {
-                    if !vm.commandReaded.isEmpty {
-                        ForEach(0..<vm.commandTitles.count, id: \.self) { index in
-                            NavigationLink(value: index) {
-                                Text(vm.commandTitles[index].capitalized)
+                    if dataLoaded {
+                        if !vm.commandReaded.isEmpty {
+                            ForEach(0...3, id: \.self) { index in
+                                NavigationLink(value: vm.commandReaded[index]) {
+                                    Text(vm.commandReaded[index][0].commandType ?? "Default")
+                                }
                             }
                         }
+                        else {
+                            Text("There is no data")
+                        }
                     }
-                    else {
-                        Text("There is no data")
-                    }
+                    
                 }
                 
                 
-            }.navigationDestination(for: Int.self) { index in
-                CommandView(navigationTitle: vm.commandTitles[index].capitalized, commandReaded: vm.commandReaded[index])
-            }
+            }.navigationDestination(for: [Command].self, destination: { commands in
+                CommandView(navigationTitle: commands.first?.commandType ?? "default", choosedCommandsType: commands)
+            })
             .onAppear {
                 Task {
-                    try? await vm.loadCommand()
-                    
+                    do {
+                        try await vm.loadCommand()
+                        dataLoaded = true
+                    } catch {
+                        print("error while loading command")
+                    }
                 }
             }.navigationTitle("Commands")
         }
     }
 }
 
+
 #Preview {
-    CommandsView()
+    NavigationStack {
+        CommandsView()
+    }
 }

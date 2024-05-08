@@ -17,7 +17,7 @@ struct Maps : Identifiable, Hashable {
     let overview : String
 }
 
-struct LineUp  {
+struct LineUp : Hashable {
     var id: String = UUID().uuidString
     let name : String
     let to : String

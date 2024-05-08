@@ -28,6 +28,8 @@
 		EC89138D2BE57CF000C88660 /* CommandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC89138C2BE57CF000C88660 /* CommandsView.swift */; };
 		EC89138F2BE57D5000C88660 /* CommandManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC89138E2BE57D5000C88660 /* CommandManager.swift */; };
 		EC8913912BE78D8700C88660 /* CommandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8913902BE78D8700C88660 /* CommandView.swift */; };
+		EC8913932BE92E1E00C88660 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8913922BE92E1D00C88660 /* AboutView.swift */; };
+		EC8913952BEB87CA00C88660 /* LineUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8913942BEB87CA00C88660 /* LineUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		EC89138C2BE57CF000C88660 /* CommandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsView.swift; sourceTree = "<group>"; };
 		EC89138E2BE57D5000C88660 /* CommandManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandManager.swift; sourceTree = "<group>"; };
 		EC8913902BE78D8700C88660 /* CommandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandView.swift; sourceTree = "<group>"; };
+		EC8913922BE92E1D00C88660 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		EC8913942BEB87CA00C88660 /* LineUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +115,9 @@
 			children = (
 				EC19C0B12BE43066009331D2 /* MapsView.swift */,
 				EC19C0C92BE46469009331D2 /* SettingsView.swift */,
+				EC8913922BE92E1D00C88660 /* AboutView.swift */,
 				EC89138A2BE4DD5B00C88660 /* MapView.swift */,
+				EC8913942BEB87CA00C88660 /* LineUpView.swift */,
 				EC89138C2BE57CF000C88660 /* CommandsView.swift */,
 				EC8913902BE78D8700C88660 /* CommandView.swift */,
 			);
@@ -214,9 +220,11 @@
 				EC89138B2BE4DD5B00C88660 /* MapView.swift in Sources */,
 				EC8913892BE4DD4900C88660 /* MapsViewModel.swift in Sources */,
 				EC8913912BE78D8700C88660 /* CommandView.swift in Sources */,
+				EC8913932BE92E1E00C88660 /* AboutView.swift in Sources */,
 				EC19C0B92BE4316C009331D2 /* MapManager.swift in Sources */,
 				EC19C0B22BE43066009331D2 /* MapsView.swift in Sources */,
 				EC89138F2BE57D5000C88660 /* CommandManager.swift in Sources */,
+				EC8913952BEB87CA00C88660 /* LineUpView.swift in Sources */,
 				EC89138D2BE57CF000C88660 /* CommandsView.swift in Sources */,
 				EC19C0A62BE42FFA009331D2 /* RootView.swift in Sources */,
 				EC19C0A42BE42FFA009331D2 /* CS2NadesApp.swift in Sources */,

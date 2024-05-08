@@ -72,21 +72,21 @@ struct MapView: View {
                     
                     List {
                         if !vm.lineUpArrayReaded.isEmpty {
-                            Section("Smoke") {
+                            Section("Smokes") {
                                 ForEach(0..<vm.lineUpArrayReaded.count, id: \.self) { index1 in
-                                    NavigationLink(value: index1) {
+                                    NavigationLink(value: vm.lineUpArrayReaded[index1]) {
                                         Text(vm.lineUpArrayReaded[index1].name)
                                     }
                                 }
                             }
                         } else {
-                            Text("lineupempty")
+                            Text("There is no LineUp")
                             
                         }
                         
                     }
-                }.navigationDestination(for: Int.self, destination: { index1 in
-                    Text(vm.lineUpArrayReaded[index1].name)
+                }.navigationDestination(for: LineUp.self, destination: { index in
+                    LineUpView(urlString: index.youtubeURL)
                 })
                 .onAppear {
                     Task {

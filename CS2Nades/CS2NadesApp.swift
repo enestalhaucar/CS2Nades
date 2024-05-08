@@ -22,7 +22,7 @@ struct CS2NadesApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
-            CommandsView()
+            RootView()
         }
     }
 }

@@ -12,6 +12,7 @@ import FirebaseFirestoreSwift
 
 struct Command : Hashable, Identifiable {
     var id : String = UUID().uuidString
+    let commandType : String?
     let commandName : String
     let commandExplanation : String
 }
@@ -31,8 +32,9 @@ final class CommandManager {
             if let data = document.data() as? [String: Any]{
                 let commandName = data["command"] as! String
                 let commandExplanation = data["explanation"] as! String
+                let commandType = data["commandType"] as? String
                 
-                let command = Command(commandName: commandName, commandExplanation: commandExplanation)
+                let command = Command(commandType: commandType, commandName: commandName , commandExplanation: commandExplanation)
                 commands.append(command)
                 
             } else {

@@ -37,6 +37,7 @@ struct MapsView: View {
     @GestureState private var dragOffset: CGFloat = 0
     @State private var selectedFilter: FilterType = .all
     @State private var selectedMapIndex : Int? = nil
+    @State private var path : [Maps] = []
     
     
     
@@ -64,14 +65,15 @@ struct MapsView: View {
                                         .frame(width: 60, height: 60)
                                         .padding(.trailing,5)
                                     
-                                    NavigationLink(value: index) {
+                                    NavigationLink(value: filteredMaps[index]) {
                                         Text(filteredMaps[index].name)
                                             .foregroundStyle(.white)
                                             .font(.system(size: 30))
                                             .fontWeight(.bold)
                                     }
-                                    .navigationDestination(for: Int.self) { value in
-                                        MapView(navigationTitle: filteredMaps[value].name, map: filteredMaps[value])
+                                    .navigationDestination(for: Maps.self) { value in
+                                        MapView(navigationTitle: value.name, map: value)
+                                       
                                     }
                                 }
                                 .frame(width: width * 0.6 , height: height / 2, alignment: .bottomLeading)
